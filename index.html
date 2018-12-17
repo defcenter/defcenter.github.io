@@ -1,0 +1,102 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1.0">
+    <title>Def Center</title>
+    <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/ico">
+    <style type="text/css">
+      html {
+        background: #222222;
+        color: #ffffff;
+        font-family: "Georgia", "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      body {
+        margin: 0 5%;
+      }
+
+      @media only screen and (min-width: 481px) {
+        body {
+          margin: 75px auto;
+          width: 550px;
+        }
+      }
+
+      h1 {
+        background: url("{{ site.baseurl }}/lime.png") top left;
+        width: 202px;
+        height: 202px;
+        margin: 0 auto 37px auto;
+        display: block
+      }
+
+      h1:hover {
+        background-position: bottom left;
+      }
+
+      h1 > span {
+        display: none;
+      }
+
+      a {
+        color: #ebffb4;
+        text-decoration: underline;
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: #222222;
+        background: #ebffb4;
+        text-decoration: none;
+      }
+
+      p,
+      ul,
+      .hr{
+        margin: 0;
+        margin-bottom: 37px;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      ul > li {
+        margin-left: 20px;
+      }
+
+      .hr {
+        background: transparent;
+        border-bottom: 1px solid #444444;
+        border-top: 1px solid #111111;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span>Def Center</span></h1>
+    <p> Консультации по любым вопросам информационной безопасности. В частности:
+    <ul>
+      <li>Аудит безопасности информационных систем. Оценка защищенности информационной инфраструктуры вашей компании: компьютеры, сервера, сетевое оборудование, программное обеспечение.</li>
+      <li>Аудит web-приложений и сервисов. Пентестинг, тестовый взлом, этичный хакинг.</li>
+      <li>Поиск закладок, скрытых камер, прослушки и устройств негласного сбора информации.</li>
+      <li>Обучение сотрудников основам информационной безопасности и социальной инженерии.</li>
+      <li>Разработка и применение рекомендаций по повышению защищенности инфраструктуры.</li>
+    </ul>
+    <p>Опыт работы в сфере: более 10 лет.</p>
+    <p>Связь по почте: <a href="mailto:1@def.center">1@def.center</a>, telegram <a href="http://t-do.ru/defcenter">http://t-do.ru/defcenter</a>.</p>
+    <div class="hr"></div>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
